@@ -26,7 +26,7 @@ Builds a static copy of your site to the `build/` folder.
 Your app is ready to be deployed!
 
 
-screenshot link : https://github.com/Mahi-0210/22kKD1A0763/blob/main/WhatsApp%20Image%202025-08-19%20at%2012.58.56_aec1ad6f.jpg
+screenshot link : https://github.com/Mahi-0210/22kKD1A0763/blob/main/pic.jpg
 
 
 
