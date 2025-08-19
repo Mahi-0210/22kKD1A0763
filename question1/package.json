@@ -1,0 +1,42 @@
+{
+  "name": "url-shortener-app",
+  "version": "1.0.0",
+  "description": "A React-based URL shortener application",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"No tests specified for this URL shortener app\" && exit 1",
+    "prepare": "husky install",
+    "prettier": "prettier '**/*.{js,jsx,ts,tsx}' --write",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+    "pre-commit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint src/**/*.{js}",
+      "cross-env CI=true react-scripts test --bail --passWithNoTests",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@snowpack/plugin-build-script": "^2.1.0",
+    "@snowpack/plugin-dotenv": "^2.1.0",
+    "@snowpack/plugin-postcss": "^1.4.3",
+    "@snowpack/plugin-react-refresh": "^2.5.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "snowpack": "^3.3.7",
+    "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
